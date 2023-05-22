@@ -4,13 +4,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BaseTest {
-    protected ExtentReports extent;
-    protected ExtentSparkReporter spark;
+    public static ExtentReports extent;
+    public static ExtentSparkReporter spark;
     @BeforeSuite
     public void suitSetUP(){
         String dateName = new SimpleDateFormat("yyyMMddhhmmss").format(new Date());

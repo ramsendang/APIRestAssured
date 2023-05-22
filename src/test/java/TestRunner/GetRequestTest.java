@@ -1,11 +1,13 @@
 package TestRunner;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import APIObjects.GETRequest;
+import BaseClass.BaseTest;
+import org.testng.annotations.Test;
 
-public class GetRequestTest {
-    
+public class GetRequestTest extends BaseTest {
+    @Test
+    public void StatusCodeTest(){
+        GETRequest get = new GETRequest();
+        get.checkHTTPSResponse();
+    }
 }
